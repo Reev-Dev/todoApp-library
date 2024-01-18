@@ -85,7 +85,6 @@ const updBookById = (id, updateBook) => {
         data[index] = { ...data[index], ...updateBook };
         fs.writeFileSync(fileDb, JSON.stringify(data));
         console.log(`\n--- Success update book with id ${id} ---`);
-        // console.log(data);
     }
 
     read.close();
