@@ -29,24 +29,12 @@ const update = async () => {
             if (datePublished) newData.datePublished = datePublished;
 
             updBookById(id, newData);
-          
-            // updBookById(id, { title, author, page, language, publisher, datePublished });
         } else {
             console.log(`Book with id ${id} not found\n`);
             update();
         }
     }
-
     askId();
-
 }
 
 update();
-
-// if (answer.trim() !== '') {
-//     resolve(answer);
-// } else {
-//     console.log("Invalid input. Try again!\n");
-//     ask();
-// }
-
